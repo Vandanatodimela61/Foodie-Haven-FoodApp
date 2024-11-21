@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <style>
+        body {
+            background-color: #ffe4e1; /* Light pink background */
+            font-family: Arial, sans-serif;
+        }
+        .registration-container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff0f5; /* Lavender blush background for the form */
+            border: 2px solid #ff69b4; /* Hot pink border */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+        h2 {
+            text-align: center;
+            color: #ff1493; /* Deep pink heading */
+        }
+        label {
+            color: #ff1493; /* Deep pink labels */
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ff69b4; /* Hot pink border */
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #ff1493; /* Deep pink submit button */
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #ff69b4; /* Lighter pink on hover */
+        }
+        .already-registered {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .already-registered a {
+            color: #ff1493;
+            text-decoration: none;
+        }
+        .already-registered a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Register</h2>
+        <form action="RegisterServlet" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="role">Role:</label>
+            <input type="text" id="role" name="role" required>
+
+            <input type="submit" value="Register">
+        </form>
+
+        <div class="already-registered">
+            <a href="login.html">Already registered? Login here</a>
+        </div>
+    </div>
+</body>
+</html>

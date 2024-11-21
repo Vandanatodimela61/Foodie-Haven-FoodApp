@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        /* Color Palette */
+        :root {
+            --primary-color: #FF6F61; /* Coral */
+            --accent-color: #FF69B4; /* Hot Pink */
+            --text-color: #4B0082; /* Indigo */
+            --button-color: #32CD32; /* Lime Green */
+            --button-hover: #228B22; /* Forest Green */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            color: var(--text-color);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            animation: wobble 2s infinite;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: var(--text-color);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: var(--button-color);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.1em;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: all 0.6s;
+        }
+
+        .button:hover::before {
+            left: 100%;
+        }
+
+        .button:hover {
+            background-color: var(--button-hover);
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Custom Animations */
+        @keyframes wobble {
+            0%, 100% { transform: translateX(0); }
+            15% { transform: translateX(-15px) rotate(-5deg); }
+            30% { transform: translateX(15px) rotate(5deg); }
+            45% { transform: translateX(-10px) rotate(-3deg); }
+            60% { transform: translateX(10px) rotate(3deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container animate__animated animate__fadeIn">
+        <h1 class="animate__animated animate__rubberBand">🎉 Congratulations! 🎉</h1>
+        <p class="animate__animated animate__slideInUp">Your registration was successful! Welcome to Crazy Foods, where your cravings will always be satisfied. Start exploring and enjoy a world of delicious flavors delivered to your doorstep!</p>
+        <a href="Login.jsp" class="button animate__animated animate__pulse animate__delay-1s">Proceed to Login</a>
+    </div>
+</body>
+</html>
